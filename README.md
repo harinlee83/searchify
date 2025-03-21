@@ -16,26 +16,31 @@ Searchify is a Chrome extension that supercharges your search capabilities, allo
 
 Quickly perform a single search across multiple websites.
 
+https://github.com/user-attachments/assets/f1fb9334-931c-441d-84eb-047f73e1272d
 
 ### Search Within a Folder
 
 Instantly search across a folder (grouped collection of websites).
 
+https://github.com/user-attachments/assets/20b54b74-7507-4dab-8fdd-7772c9887c15
 
 ### Multiple Queries
 
 Run multiple search queries on websites or folders.
 
+https://github.com/user-attachments/assets/9d4817dd-8865-4854-b94d-1b5a3b2fd7b0
 
 ### Manage Websites, Folders, and Collections
 
 Easily create, edit, and delete search configurations.
 
+https://github.com/user-attachments/assets/33062944-c5c1-4e21-935a-2c6a96e59b03
 
 ### Import/Export JSON
 
 Quickly import/export websites and folders via JSON.
 
+https://github.com/user-attachments/assets/9cdb01c1-ab87-49d3-9881-9e50ce9aed22
 
 ## Roadmap
 
