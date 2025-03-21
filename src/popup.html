@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Harin Lee (harinlee83@gmail.com)" />
+    <title>Searchify</title>
+    <link rel="stylesheet" href="output.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+
+  <body class="bg-gray-200 p-0 m-0 w-[500px] border-2 border-white">
+    <div class="flex flex-col justify-between h-fit">
+      <div>
+        <div class="bg-gray-700 p-3 flex items-center gap-2 h-[60px]">
+          <img src="./assets/icon.svg" alt="searchify-logo" class="w-10 h-10" />
+          <div class="font-extrabold text-lg text-white tracking-wider">
+            SEARCHIFY
+          </div>
+          <div class="flex flex-row relative w-full">
+            <div id="inputWrapper" class="w-full">
+              <input
+                type="text"
+                id="searchInput"
+                class="w-full px-3 py-1 rounded-l bg-white text-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="Enter search term..."
+                autofocus
+              />
+            </div>
+            <select
+              id="inputType"
+              class="px-3 py-1 rounded-l-none text-xl focus:outline-none border-l-2 border-gray-200 rounded-r bg-white"
+            >
+              <option value="single">Single</option>
+              <option value="multiple">Multiple</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Collections Tabs -->
+        <div
+          id="collectionsContainer"
+          class="flex overflow-x-auto bg-white shadow"
+        ></div>
+        <!-- Search engines grid -->
+        <div
+          id="gridContainer"
+          class="grid grid-cols-2 gap-2 bg-gray-200 overflow-y-auto h-auto p-2"
+        ></div>
+      </div>
+
+      <!-- Footer -->
+      <div class="bg-gray-200 p-2 flex justify-between items-center">
+        <button
+          id="dashboardButton"
+          class="flex items-center gap-1 text-sm text-gray-700 bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 cursor-pointer"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
+          Settings
+        </button>
+        <a href="https://www.buymeacoffee.com/harinlee" target="_blank">
+          <img
+            src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=harinlee&button_colour=FFDD00&font_colour=000000&font_family=Arial&outline_colour=000000&coffee_colour=ffffff"
+            class="h-[30px] rounded-md transition-transform duration-100 hover:shadow-lg"
+          />
+        </a>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

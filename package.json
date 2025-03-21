@@ -1,0 +1,24 @@
+{
+  "name": "searchify",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A chrome extension that supercharges your search capabilities",
+  "main": "manifest.json",
+  "author": "Harin Lee",
+  "license": "ISC",
+  "scripts": {
+    "test": "vitest",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build:js": "esbuild ./src/*.js --bundle --minify --outdir=./dist --format=iife",
+    "copy:html": "cp ./src/*.html ./dist/",
+    "copy:json": "cp ./src/manifest.json ./dist/",
+    "copy:assets": "cp -r ./src/assets ./dist/",
+    "build": "npm run build:css && npm run build:js && npm run copy:html && npm run copy:json && npm run copy:assets"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.12",
+    "esbuild": "^0.25.0",
+    "jsdom": "^26.0.0",
+    "vitest": "^3.0.8"
+  }
+}

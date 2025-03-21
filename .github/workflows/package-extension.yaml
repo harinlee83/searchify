@@ -1,0 +1,42 @@
+name: Package Searchify Extension
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Run Tests
+        run: npm run test
+
+      - name: Build extension
+        run: npm run build
+
+      - name: Package extension
+        run: |
+          cd dist
+          zip -r ../searchify-${{ github.ref_name }}.zip ./*
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: searchify-${{ github.ref_name }}.zip
+          body: "Searchify version ${{ github.ref_name }} is now available for download."
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

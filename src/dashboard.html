@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Harin Lee (harinlee83@gmail.com)" />
+    <title>Searchify - Settings</title>
+    <link rel="stylesheet" href="output.css" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  </head>
+
+  <body class="bg-gray-100 p-6 max-w-[1000px] mx-auto">
+    <div class="max-w-6xl mx-auto">
+      <h1 class="text-3xl font-bold mb-6">Settings</h1>
+
+      <!-- Tabs -->
+      <div class="mb-6 border-b border-gray-200">
+        <ul class="flex flex-wrap -mb-px">
+          <li class="mr-2">
+            <button
+              id="configureTab"
+              class="inline-block py-2 px-4 text-blue-600 font-medium border-b-2 border-blue-600 rounded-t-lg active cursor-pointer"
+              aria-current="page"
+            >
+              Configure
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tab Contents -->
+      <div class="tab-content">
+        <!-- Configure Tab Content -->
+        <div
+          id="configureContent"
+          class="flex flex-row flex-wrap justify-center gap-4"
+        >
+          <!-- Collections Section -->
+          <div id="collections" class="space-y-4 w-full lg:max-w-[430px]"></div>
+
+          <!-- JSON Section -->
+          <div id="json" class="space-y-4 w-full lg:max-w-[430px]">
+            <!-- Export JSON -->
+            <div class="bg-white p-4 rounded-lg shadow">
+              <h2 class="text-xl font-semibold mb-2">Export JSON</h2>
+              <div class="relative">
+                <textarea
+                  id="jsonTextarea"
+                  class="w-full p-2 border rounded-lg font-mono text-sm h-[30vh] min-h-12"
+                  readonly
+                ></textarea>
+                <button
+                  id="copyJson"
+                  class="absolute top-2 right-5 bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 cursor-pointer"
+                  tabindex="0"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+
+            <!-- Import JSON -->
+            <div class="bg-white p-4 rounded-lg shadow">
+              <h2 class="text-xl font-semibold mb-2">Import JSON</h2>
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2">
+                  <button
+                    id="exampleJSONBtn"
+                    class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 cursor-pointer"
+                  >
+                    Load Example JSON
+                  </button>
+                </div>
+              </div>
+
+              <div class="relative">
+                <textarea
+                  id="importJsonTextarea"
+                  class="w-full p-2 border rounded-lg font-mono text-sm h-[30vh] min-h-12"
+                  placeholder="Paste your JSON data here..."
+                ></textarea>
+                <button
+                  id="importJsonBtn"
+                  class="absolute top-2 right-5 bg-green-500 text-white px-3 py-1 rounded hover:bg-green-600 cursor-pointer"
+                  tabindex="0"
+                >
+                  Import
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
