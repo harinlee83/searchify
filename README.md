@@ -1,6 +1,10 @@
 # searchify
 <div align="center">
 
+<picture>
+    <img src="src/assets/icon.svg" alt="The Kinase Library" width="100px" style="margin-bottom: 15px">
+</picture>
+
 [![Chrome Web Store](https://img.shields.io/badge/Chrome_Extension-Download-brightgreen)](https://chrome.google.com/webstore) &ensp;
 [![License: CC BY-NC-SA 3.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%203.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/3.0/) &ensp;
 ![Release](https://img.shields.io/github/v/release/harinlee83/searchify) &ensp;
